@@ -46,7 +46,9 @@ hr {
 </style>
 </head>
 <body>
-<form>
+<form action="login" method="post">
+    {% csrf_token %}
+
   <div class="container">
   <center>  <h1> LOGIN</h1> </center>
   <hr>
@@ -59,6 +61,7 @@ hr {
     <input type="password" placeholder="Enter Password" name="psw" required>
 
   <button type="submit" class="registerbtn">Login</button>
+  </div>
 </form>
 </body>
 </html>

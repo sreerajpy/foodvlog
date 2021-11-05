@@ -1,11 +1,8 @@
 from urllib import request
-
 from django.shortcuts import render,redirect,get_object_or_404
 from . models import *
 from shop.models import *
-
 from django.core.exceptions import ObjectDoesNotExist
-
 # Create your views here.
 
 def cart_details(request,tot=0,count=0,cart_items=None):

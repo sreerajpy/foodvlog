@@ -1,6 +1,7 @@
-from django.db import models
 from django.template.defaultfilters import slugify
+from django.db import models
 from django.urls import reverse
+
 # Create your models here.
 class categ(models.Model):
     name=models.CharField(max_length=250,unique=True)

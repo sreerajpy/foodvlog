@@ -46,14 +46,16 @@ hr {
 </style>
 </head>
 <body>
-<form>
+<form action="register" method="post">
+    {% csrf_token %}
+
   <div class="container">
   <center>  <h1> Register</h1> </center>
   <hr>
   <label> Firstname </label>
-<input type="text" name="firstname" placeholder= "Firstname" size="15" required />
+<input type="text" name="first_name" placeholder= "Firstname" size="15" required />
 <label> Lastname: </label>
-<input type="text" name="lastname" placeholder="Lastname" size="15"required />
+<input type="text" name="last_name" placeholder="Lastname" size="15"required />
 
 <label> Username: </label>
 <input type="text" name="username" placeholder="Username" size="15"required />
@@ -68,6 +70,7 @@ hr {
     <label for="psw-repeat"><b>Re-type Password</b></label>
     <input type="password" placeholder="Retype Password" name="password2" required>
     <button type="submit" class="registerbtn">Register</button>
+  </div>
 </form>
 </body>
 </html>

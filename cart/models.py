@@ -11,10 +11,10 @@ class cartlist(models.Model):
         return self.cart_id
 
 class items(models.Model):
-    prodt=models.ForeignKey(products,on_delete=models.CASCADE)
-    cart=models.ForeignKey(cartlist,on_delete=models.CASCADE)
-    quan=models.IntegerField()
-    active=models.BooleanField(default=True)
+    prodt = models.ForeignKey(products,on_delete=models.CASCADE)
+    cart = models.ForeignKey(cartlist,on_delete=models.CASCADE)
+    quan = models.IntegerField()
+    active = models.BooleanField(default=True)
 
     def __str__(self):
         return self.prodt
